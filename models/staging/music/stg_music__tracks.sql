@@ -10,4 +10,4 @@ SELECT
     UnitPrice AS unit_price,
     (Milliseconds/1000) AS track_length_seconds,
     (Milliseconds/6000) AS track_length_mins
-FROM {{source('music', 'playlisttrack')}}
+FROM {{source('music', 'track')}}

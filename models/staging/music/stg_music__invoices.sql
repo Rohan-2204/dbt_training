@@ -6,6 +6,6 @@ SELECT
     BillingCity AS billing_city,
     BillingState AS billing_state,
     BillingCountry AS billing_country,
-    BillingPostalCode AS billing_zipcode
+    BillingPostalCode AS billing_zipcode,
     Total AS invoice_revenue_usd
 FROM {{source('music', 'invoice')}}

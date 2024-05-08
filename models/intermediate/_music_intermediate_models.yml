@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_customers_joined_to_employees
+    description: This model gives joint information combined using 
+      two tables, customers and employees
+    columns: 
+      - name: customer_id, employee_id
+        tests:
+          - unique
+          - not_null
+  
+  - name: int_invoice_lines_joined_to_invoices
+    description: This model combines invoice and incoicelines tables
+    columns: 
+      - name: invoice_id, invoiceline_id
+        tests:
+          - unique
+          - not_null
+          
+  - name: int_tracks_joined_to_albums_artists_genres_mediatypes
+    description: This gives complete details about tracks i.e their names, artists, albums,
+      mediatypes
+    columns:
+      - name: track_id, album_id, artist_id, genre_id, mediatype_id
+        tests:
+          - unique
+          - not_null
+          
+              

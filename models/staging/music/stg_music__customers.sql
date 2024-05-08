@@ -1,6 +1,17 @@
+{{
+    config(
+        materialized = 'table'
+    )
+}}
+
+WITH customers AS(
+    SELECT * FROM {{source('music', 'customer')}}
+)
+
+
 SELECT
     CustomerId AS customer_id,
-    FirstName AS customer_first_name, 
+    FirstName AS customer_first_name,
     LastName AS customer_last_name,
     Company AS customer_work_company,
     Address AS customer_mailing_address,
@@ -12,4 +23,4 @@ SELECT
     Fax AS customer_fax_number,
     Email AS customer_email_address,
     SupportRepId AS representative_employee_id
-FROM {{source('music', 'customer')}}
+FROM customers

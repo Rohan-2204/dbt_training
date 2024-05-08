@@ -4,7 +4,7 @@ SELECT
     FirstName AS employee_first_name,
     Title AS employee_title,
     ReportsTo AS supervisor_employee_id,
-    BirthDateAS AS employee_birth_date,
+    BirthDate AS employee_birth_date,
     HireDate AS employee_hire_date,
     Address AS employee_address,
     City AS employee_city,
