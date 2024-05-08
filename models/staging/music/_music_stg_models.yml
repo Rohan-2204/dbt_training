@@ -1,0 +1,98 @@
+version: 2
+
+models:
+  - name: stg_music_albums
+    description : This model has the name of the albums and
+      artists that created the albums
+    columns:
+      - name: album_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__artists  
+    description : This model has the name of artists and their
+      respective IDs        
+    columns:
+      - name: artist_id
+        tests:
+          - unique
+          - not_null
+            
+  - name: stg_music__customers
+    description: This model has the names, addresses and employee 
+      ids of customers
+    columns:
+      - name: customer_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__employees
+    description: This model has the names, addresses and important
+      details of employees 
+    columns:
+      - name: employee_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__genres
+    description: This model has the genre names corresponding 
+      to their respective ids
+    columns:
+      - name: genre_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__invoice_lines
+    description: This model has the track id, invoice id, revenue 
+      and item count corresponding to invoice line ids
+    columns:
+      - name: invoiceline_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__invoices
+    description: This model has the invoice ids and billing details of the customers
+    columns:
+      - name: invoice_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__media_types
+    description: This model has the names corresponding to mediatype ids
+    columns:
+      - name: mediatype_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__playlist_tracks
+    description: This model has the track id corresponding to playlist id
+    columns:
+      - name: playlist_id, track_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__playlists
+    description: This model has the names and ids of the playlists
+    columns:
+      - name: playlist_id
+        tests:
+            - unique
+            - not_null
+            
+  - name: stg_music__tracks
+    description: This model has the name, id and details of the tracks.
+    columns:
+      - name: track_id
+        tests:
+            - unique
+            - not_null
+            
+  

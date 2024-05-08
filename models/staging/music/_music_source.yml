@@ -1,6 +1,6 @@
+version: 2
 
-
-sources: 
+sources:
   - name: music
     database: music
     schema: dwh_training
@@ -12,6 +12,7 @@ sources:
       - name: employee
       - name: genre
       - name: invoice
+      - name: invoiceline
       - name: mediatype
       - name: playlist
       - name: playlisttrack
