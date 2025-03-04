@@ -1,4 +1,4 @@
-with int_customers_joined_to_employees as(
+8with int_customers_joined_to_employees as(
     select * from {{ref('int_customers_joined_to_employees')}}
 ),
 

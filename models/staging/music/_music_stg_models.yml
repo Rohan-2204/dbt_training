@@ -18,7 +18,7 @@ models:
         tests:
           - unique
           - not_null
-            
+
   - name: stg_music__customers
     description: This model has the names, addresses and employee 
       ids of customers
